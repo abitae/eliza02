@@ -20,7 +20,7 @@ class UserModal extends ModalComponent
     {
         $this->form->save();
         $this->closeModal();
-        //$this->dispatch('refresh-list');
+        $this->dispatch('refresh-list');
     }
     public function render()
     {

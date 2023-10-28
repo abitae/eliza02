@@ -8,7 +8,7 @@
     @php
         $heads = ['ID', 'Name', ['label' => 'Email', 'width' => 30], ['label' => 'Role', 'width' => 10], ['label' => 'Actions', 'no-export' => true, 'width' => 5]];
     @endphp
-    <div class="row">
+    <div wire:ignore class="row">
         <x-adminlte-datatable id="userTable" :heads="$heads" head-theme="light" bordered hoverable with-buttons>
             @foreach ($users as $user)
                 <tr>

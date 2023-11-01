@@ -14,7 +14,7 @@ class UserForm extends Form
     public $name = '';
     public $email = '';
     public $password = '';
-    public $role = '';
+    public $role = 'User';
 
     public function setUser(?User $user = null): void
     {

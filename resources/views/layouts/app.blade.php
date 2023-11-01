@@ -4,10 +4,11 @@
 @stop
 @section('content')
     <div class="container-fluid">
-        {{ $slot }}
-        
+        {{ $slot }} 
     </div>
     @livewire('wire-elements-modal')
+    <x-livewire-alert::scripts />
+    <x-livewire-alert::flash />
 @stop
 @section('css')
     @vite(['resources/css/app.css', 'resources/js/app.js'])

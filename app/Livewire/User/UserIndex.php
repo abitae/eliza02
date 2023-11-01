@@ -9,6 +9,7 @@ use Illuminate\Contracts\Support\Renderable;
 
 class UserIndex extends Component
 {
+
     public function render(): Renderable
     {
         $users = User::all();

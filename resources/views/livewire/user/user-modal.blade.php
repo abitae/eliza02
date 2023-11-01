@@ -47,7 +47,6 @@
                             <i class="fas fa-user"></i>
                         </div>
                     </x-slot>
-                    <option>--Select Role--</option>
                     @forelse ($roles as $role)
                         <option value="{{ $role }}">{{ $role }}</option>
                     @empty

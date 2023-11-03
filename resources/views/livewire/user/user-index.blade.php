@@ -2,8 +2,6 @@
     <div class="pb-4 row">
         <x-adminlte-button x-on:click="$dispatch('openModal', { component: 'user.user-modal' })" label="New User"
             class="btn-flat bg-purple" icon="fas fa-sm fa-plus" />
-        <button type="button" class="m-1 btn btn-primary" id="btnOpenSaltB">Open Sweetalert2 (Basic)</button>
-        <button type="button" class="m-1 btn btn-success" id="btnOpenSaltC">Open Sweetalert2 (Custom)</button>
     </div>
     @php
         $heads = ['ID', 'Name', ['label' => 'Email', 'width' => 30], ['label' => 'Role', 'width' => 10], ['label' => 'Actions', 'no-export' => true, 'width' => 5]];
@@ -34,31 +32,4 @@
             @endforeach
         </x-adminlte-datatable>
     </div>
-    @push('js')
-        <script>
-            $(document).ready(function() {
-                $('#btnOpenSaltB').click(function() {
-                    Swal.fire(
-                        'Good job!',
-                        'You clicked the button!',
-                        'success'
-                    );
-                });
-
-                var Toast = Swal.mixin({
-                    toast: true,
-                    position: 'top-end',
-                    showConfirmButton: false,
-                    timer: 3000
-                });
-
-                $('#btnOpenSaltC').click(function() {
-                    Toast.fire({
-                        icon: 'success',
-                        title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-                    });
-                });
-            })
-        </script>
-    @endpush
 </div>
